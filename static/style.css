@@ -1,0 +1,54 @@
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Game container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Canvas styling */
+canvas {
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Score and Game Over text */
+#score, #gameOverText {
+    font-size: 20px;
+    margin: 20px;
+}
+
+/* Game over screen styling */
+#gameOverText {
+    font-size: 24px;
+    color: #ffcc00;
+    display: none;
+}
+
+/* Button styling */
+#restartButton {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+#restartButton:hover {
+    background-color: #ff9f00;
+}
