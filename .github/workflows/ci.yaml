@@ -43,7 +43,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: index.docker.io/my-docker-hub-namespace/my-docker-hub-repository
+          subject-name: index.docker.io/haadit/brick-game
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
@@ -61,4 +61,4 @@ jobs:
           script: |
             docker stop brickg
             docker rm brickg
-            docker run -d --name brickg -p 9000:9000 docker.io/haadit/brick-game:latest
+            docker run -d --name brickg -p 9000:9000 docker.io/haadit/brick-game:main
