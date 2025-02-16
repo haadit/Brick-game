@@ -17,4 +17,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
+          script: |
+            docker stop brickg
+            docker rm brickg
+            docker build -t brickg .
+            docker run -d --name brickg -p 9000:9000 brickg
